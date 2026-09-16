@@ -128,6 +128,6 @@ loginForm.addEventListener("submit", function (e) {
 
     // AI Study Assistant खोलना
     setTimeout(() => {
-        window.location.href = "index.html";
+        window.location.href = "study.html";
     }, 1000);
 });
