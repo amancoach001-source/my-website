@@ -29,7 +29,7 @@ askBtn.addEventListener("click", async function() {
         answer.innerText = data.answer;
 
     } catch (error) {
-        answer.innerText = "Backend se connection nahi ho paya.";
+    answer.innerText = "Error: " + error.message;
     }
 });
 
