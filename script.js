@@ -14,7 +14,7 @@ askBtn.addEventListener("click", async function() {
     answer.innerText = "Jawab aa raha hai...";
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/ask", {
+        const response = await fetch("https://ai-study-assistant-1pit.onrender.com/ask", {, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
