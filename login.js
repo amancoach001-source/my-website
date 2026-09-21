@@ -1,3 +1,11 @@
+// ===============================
+// CHECK LOGIN STATUS
+// ===============================
+
+if (localStorage.getItem("loggedIn") === "true") {
+    window.location.replace("study.html");
+}
+
 
 
 // ===============================
