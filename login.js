@@ -1,4 +1,12 @@
 // ===============================
+// CHECK LOGIN STATUS
+// ===============================
+
+if (localStorage.getItem("loggedIn") === "true") {
+    window.location.href = "study.html";
+}
+
+// ===============================
 // AI STUDY ASSISTANT - LOGIN JS
 // ===============================
 
