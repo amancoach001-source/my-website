@@ -1,19 +1,37 @@
 // ===============================
-// CHECK LOGIN STATUS
-// ===============================
-
-if (localStorage.getItem("loggedIn") === "true") {
-    window.location.replace("study.html");
-}
-
-
-
-// ===============================
 // AI STUDY ASSISTANT - LOGIN JS
+// 24-HOUR LOGIN SYSTEM
 // ===============================
 
 const loginForm = document.getElementById("loginForm");
 const signupForm = document.getElementById("signupForm");
+
+// ===============================
+// CHECK LOGIN STATUS
+// ===============================
+
+const loginTime = localStorage.getItem("loginTime");
+
+if (loginTime) {
+    const currentTime = Date.now();
+    const elapsedTime = currentTime - Number(loginTime);
+
+    // 24 hours = 24 × 60 × 60 × 1000 milliseconds
+    const twentyFourHours = 24 * 60 * 60 * 1000;
+
+    if (elapsedTime < twentyFourHours) {
+        // Login अभी valid है
+        window.location.replace("study.html");
+    } else {
+        // 24 घंटे पूरे हो गए
+        localStorage.removeItem("loginTime");
+        localStorage.removeItem("loggedIn");
+    }
+}
+
+// ===============================
+// TOAST MESSAGE
+// ===============================
 
 function showToast(message) {
     const toast = document.getElementById("toast");
@@ -30,13 +48,15 @@ function showToast(message) {
     }
 }
 
-// Sign Up page open
+// ===============================
+// SIGN UP / LOGIN SWITCH
+// ===============================
+
 document.getElementById("toSignup").addEventListener("click", () => {
     loginForm.classList.add("hidden");
     signupForm.classList.remove("hidden");
 });
 
-// Login page open
 document.getElementById("toLogin").addEventListener("click", () => {
     signupForm.classList.add("hidden");
     loginForm.classList.remove("hidden");
@@ -129,8 +149,14 @@ loginForm.addEventListener("submit", function (e) {
         return;
     }
 
-    // Login successful
+    // ===============================
+    // LOGIN SUCCESS
+    // ===============================
+
     localStorage.setItem("loggedIn", "true");
+
+    // Login का current time save करें
+    localStorage.setItem("loginTime", Date.now().toString());
 
     showToast(`Welcome back, ${user.name}! ✅`);
 
@@ -138,6 +164,6 @@ loginForm.addEventListener("submit", function (e) {
 
     // AI Study Assistant खोलना
     setTimeout(() => {
-        window.location.href = "study.html";
+        window.location.replace("study.html");
     }, 1000);
 });
