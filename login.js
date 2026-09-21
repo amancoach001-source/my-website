@@ -1,14 +1,4 @@
-// ===============================
-// CHECK LOGIN STATUS
-// ===============================
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    if (localStorage.getItem("loggedIn") === "true") {
-        window.location.replace("study.html");
-    }
-
-});
 
 // ===============================
 // AI STUDY ASSISTANT - LOGIN JS
