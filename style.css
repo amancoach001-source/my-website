@@ -136,3 +136,23 @@ button:active {
 .logout-btn:hover {
     background-color: #b02a37;
 }
+
+.logout-btn {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0;
+    padding: 12px 20px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    position: static;
+    box-sizing: border-box;
+}
+
+.logout-btn:hover {
+    background: #b02a37;
+}
