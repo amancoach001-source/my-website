@@ -1,18 +1,7 @@
-// AI Study Assistant - Logout
-
 const logoutBtn = document.getElementById("logoutBtn");
 
-if (logoutBtn) {
-    logoutBtn.addEventListener("click", function () {
-        const confirmLogout = confirm(
-            "Kya aap logout karna chahte hain?"
-        );
-
-        if (confirmLogout) {
-            localStorage.removeItem("loggedIn");
-            localStorage.removeItem("loginTime");
-
-            window.location.replace("index.html");
-        }
-    });
-}
+logoutBtn?.addEventListener("click", function () {
+    localStorage.removeItem("loggedIn");
+    // agar aapki login page ka naam alag hai (jaise index.html), yahan badal dena
+    window.location.href = "index.html";
+});
