@@ -8,67 +8,36 @@
 
     <link rel="stylesheet" href="style.css">
 
+    
+
 </head>
 
 <body>
 
-    <!-- ===== Sidebar (History + Projects) ===== -->
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <span>📚 Menu</span>
-            <button id="closeSidebar" class="icon-btn" type="button">✕</button>
-        </div>
 
-        <button id="newChatBtn" class="new-chat-btn" type="button">+ New Chat</button>
-
-        <div class="sidebar-section">
-            <h3>🗂️ Projects</h3>
-            <button id="newProjectBtn" class="side-action-btn" type="button">+ New Project</button>
-            <ul id="projectList" class="side-list"></ul>
-        </div>
-
-        <div class="sidebar-section">
-            <h3>🕒 History</h3>
-            <ul id="historyList" class="side-list"></ul>
-        </div>
-    </div>
-
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
     <div class="container">
 
-        <div class="top-bar">
-            <button id="menuBtn" class="icon-btn" type="button">☰</button>
-            <h1>🤖 AI Study Assistant</h1>
-        </div>
+        <h1>🤖 AI Study Assistant</h1>
 
         <p>Apna study doubt yahan likho</p>
 
-        <div class="input-row">
-            <button id="attachBtn" class="round-icon-btn" type="button" title="File upload">➕</button>
-            <input type="file" id="fileInput" style="display:none" multiple>
-
-            <input
-                type="text"
-                placeholder="Apna sawal likho..."
-                id="question"
-            >
-
-            <button id="micBtn" class="round-icon-btn" type="button" title="Voice input">🎤</button>
-        </div>
-
-        <div id="fileNameDisplay" class="file-name-display"></div>
+        <input
+            type="text"
+            placeholder="Apna sawal likho..."
+            id="question"
+        >
 
         <button id="askBtn">Ask AI</button>
         <div id="answer"></div>
         <button id="logoutBtn" class="logout-btn" type="button">
     🚪 Logout
         </button>
-
+        
     </div>
 <script src="script.js"></script>
-<script src="logout.js"></script>
-    <script src="login.js"></script>
 
+    <script src="logout.js"></script>
+    
 </body>
 </html>
