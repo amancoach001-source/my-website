@@ -1,3 +1,7 @@
+console.log("AI Study Assistant Login JS - Version 4");
+
+
+
 // ===============================
 // AI STUDY ASSISTANT - LOGIN JS
 // SECURE PASSWORD STORAGE VERSION
