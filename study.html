@@ -15,6 +15,29 @@
 <body>
 
     
+<script type="module">
+  import { auth } from "./firebase.js";
+  import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+  const studyContainer = document.querySelector(".container");
+
+  if (studyContainer) {
+    studyContainer.style.visibility = "hidden";
+  }
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      if (studyContainer) {
+        studyContainer.style.visibility = "visible";
+      }
+    } else {
+      window.location.replace("index.html");
+    }
+  });
+</script>
+
+
+    
 
 
 
