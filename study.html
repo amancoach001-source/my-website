@@ -3,43 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>AI Study Assistant</title>
 
     <link rel="stylesheet" href="style.css">
-
-    
-
 </head>
 
 <body>
-
-    
-<script type="module">
-  import { auth } from "./firebase.js";
-  import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
-
-  const studyContainer = document.querySelector(".container");
-
-  if (studyContainer) {
-    studyContainer.style.visibility = "hidden";
-  }
-
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      if (studyContainer) {
-        studyContainer.style.visibility = "visible";
-      }
-    } else {
-      window.location.replace("index.html");
-    }
-  });
-</script>
-
-
-    
-
-
 
     <div class="container">
 
@@ -54,15 +23,12 @@
         >
 
         <button id="askBtn">Ask AI</button>
-        <div id="answer"></div>
-        <button id="logoutBtn" class="logout-btn" type="button">
-    🚪 Logout
-        </button>
-        
-    </div>
-<script src="script.js"></script>
 
-    
-    
+        <div id="answer"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
