@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="hi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +7,14 @@
     <title>AI Study Assistant</title>
 
     <link rel="stylesheet" href="style.css">
+
+    
+
 </head>
 
 <body>
+
+
 
     <div class="container">
 
@@ -20,18 +24,20 @@
 
         <input
             type="text"
-            id="question"
             placeholder="Apna sawal likho..."
+            id="question"
         >
 
         <button id="askBtn">Ask AI</button>
-
         <div id="answer"></div>
-
+        <button id="logoutBtn" class="logout-btn" type="button">
+    🚪 Logout
+        </button>
+        
     </div>
+<script src="script.js"></script>
 
-    <script src="script.js"></script>
-
+    <script src="logout.js"></script>
+    
 </body>
-
 </html>
